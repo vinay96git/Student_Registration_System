@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="heading">
+        <h1>
+            <u>Students Registration System</u>
+        </h1>
+        <p>
+            <i>Form to register the students and check the list of already enrolled students.</i>
+        </p>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <div class="registration_form">
+                    <form autocomplete="off" onsubmit="onFormSubmit(event)" class="form">
+                        <div>
+                            <input type="text" name="name" placeholder="Full Name" id="name" required>
+                        </div>
+                        <div>
+                            <input type="alphanumeric" name="id" placeholder="Student ID" id="id" required>
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Email ID" id="email" required>
+                        </div>
+                        <div>
+                            <input type="number" name="contact" placeholder="Contact no." id="contact" required>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset" onclick="resetForm()">
+                        </div>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <table class="list" id="registeredInfo">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Contact No.</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be added here using JavaScript -->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
